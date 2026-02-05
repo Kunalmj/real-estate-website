@@ -1,0 +1,35 @@
+@import "../../responsive.scss";
+
+
+.layout{
+    height: 100vh;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    @include sm{
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+    @include lg{
+        // background-color:rgb(218, 144, 48);
+        max-width: 1366px;
+    }
+    @include md{
+        // background-color: rgb(201, 219, 111);
+        max-width: 768px;
+    }
+    @include sm{
+        // background-color: #f69797;
+        max-width: 640px;
+    }
+
+    .content{
+        // flex:1;
+        height: calc(100vh - 100px);
+        // padding-bottom: 10px;
+    }
+}
