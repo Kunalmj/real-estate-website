@@ -1,5 +1,13 @@
-export const register = (req,res) =>{
-    res.send("register route")
+import bcrypt from "bcrypt"
+
+export const register = async (req,res) =>{
+    const {username,email,password}=req.body;
+
+    //Hash Password
+
+    const hashedPassword = await bcrypt.hash(password,10);
+    //create a new user and save to db
+    
 }
 export const login = (req,res) =>{
 
